@@ -55,6 +55,7 @@ All artwork is the **genuine source material**, extracted from the original
 | Asset                          | File                             | Used in              |
 |--------------------------------|----------------------------------|----------------------|
 | Torii logo (transparent PNG)   | `assets/torii-logo.png`          | Header & footer      |
+| Torii short / icon mark        | `assets/torii-short.png`         | Favicon & partner card |
 | Technical Hub logo             | `assets/technical-hub-logo.png`  | Hero card & footer   |
 | Torii delivery-team photo      | `assets/team-photo.jpg`          | Trainer Readiness    |
 | Developer-training session     | `assets/training-classroom.jpg`  | Engineering Velocity |
