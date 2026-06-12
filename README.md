@@ -33,19 +33,23 @@ It's a static site — just open it. No install required.
 
 ## Page sections
 
-1. **Hero** — headline, partner card, key meta (Partner / Client / Focus).
+1. **Hero** — headline, co-brand partner card, key meta (Partner / Client / Focus).
 2. **Stats strip** — animated outcome counters.
-3. **Executive Summary** — overview from the PDF.
-4. **Trainer Readiness** — train-the-trainer framework + checklist (team photo).
-5. **Engineering Velocity** — developer tracks + three capability cards
+3. **Executive Summary** — overview, expanded into justified prose.
+4. **The Challenge** — the starting point + three "barrier" cards *(recommended)*.
+5. **Trainer Readiness** — train-the-trainer framework + checklist (team photo).
+6. **Pull quote** — highlighted outcome statement in Torii's voice *(recommended)*.
+7. **Engineering Velocity** — developer tracks + three capability cards
    (Context-Aware Code Assistance, Automated QA, Accelerated Prototyping).
-6. **Measurable Impact** — four KPI cards.
-7. **The Journey** — 4-step timeline (added/recommended content).
-8. **Conclusion / CTA** — closing statement + contact buttons.
-9. **Footer** — navigation, partnership links, dual branding.
+8. **Measurable Impact** — narrative + four KPI cards.
+9. **The Journey** — 4-step timeline *(recommended)*.
+10. **About the Partners** — Torii & Technical Hub profiles *(recommended)*.
+11. **The Road Ahead / Conclusion** — closing statement + contact buttons.
+12. **Footer** — navigation, partnership links, dual branding.
 
-All wording is taken from the supplied PDF; the stats strip, timeline, and impact cards are
-recommended additions that visualise the case study.
+Core wording is drawn from the supplied document; the stats strip, Challenge, pull quote, timeline,
+and About sections are professionally written recommended additions that frame the case study.
+Body paragraphs use justified text where it improves readability.
 
 ## Images & logos
 
