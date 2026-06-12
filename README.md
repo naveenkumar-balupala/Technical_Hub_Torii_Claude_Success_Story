@@ -63,6 +63,7 @@ All artwork is the **genuine source material**, extracted from the original
 | Technical Hub logo             | `assets/technical-hub-logo.png`  | Hero card & footer   |
 | Torii delivery-team photo      | `assets/team-photo.jpg`          | Trainer Readiness    |
 | Developer-training session     | `assets/training-classroom.jpg`  | Engineering Velocity |
+| Certified team (wide group)    | `assets/architects-team.jpg`     | 10 Certified Architects |
 
 The Torii logo's surrounding whitespace was trimmed to a tight bounding box so it sits cleanly in
 the header. To swap any image, just replace the file in `assets/` keeping the same name.
