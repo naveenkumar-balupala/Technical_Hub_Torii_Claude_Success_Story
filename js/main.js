@@ -61,6 +61,62 @@
     }
   });
 
+  /* ---- Image carousel ---- */
+  (function () {
+    var root = document.getElementById("ncetCarousel");
+    if (!root) return;
+    var track = root.querySelector(".carousel-track");
+    var slides = root.querySelectorAll(".carousel-slide");
+    var dotsWrap = root.querySelector(".carousel-dots");
+    var counter = root.querySelector(".carousel-counter");
+    var n = slides.length, i = 0, timer = null;
+
+    for (var d = 0; d < n; d++) {
+      (function (idx) {
+        var b = document.createElement("button");
+        b.setAttribute("role", "tab");
+        b.setAttribute("aria-label", "Go to slide " + (idx + 1));
+        b.addEventListener("click", function () { go(idx); restart(); });
+        dotsWrap.appendChild(b);
+      })(d);
+    }
+    var dots = dotsWrap.querySelectorAll("button");
+
+    function go(idx) {
+      i = (idx + n) % n;
+      track.style.transform = "translateX(" + (-i * 100) + "%)";
+      dots.forEach(function (x, k) { x.classList.toggle("active", k === i); });
+      if (counter) counter.textContent = (i + 1) + " / " + n;
+    }
+    function next() { go(i + 1); }
+    function prev() { go(i - 1); }
+    function play() { timer = setInterval(next, 5000); }
+    function restart() { clearInterval(timer); play(); }
+
+    root.querySelector(".next").addEventListener("click", function () { next(); restart(); });
+    root.querySelector(".prev").addEventListener("click", function () { prev(); restart(); });
+    root.addEventListener("mouseenter", function () { clearInterval(timer); });
+    root.addEventListener("mouseleave", play);
+
+    root.setAttribute("tabindex", "0");
+    root.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { next(); restart(); }
+      if (e.key === "ArrowLeft") { prev(); restart(); }
+    });
+
+    /* basic touch / swipe support */
+    var x0 = null;
+    root.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { (dx < 0 ? next() : prev()); restart(); }
+      x0 = null;
+    });
+
+    go(0); play();
+  })();
+
   /* ---- Current year in footer ---- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
